@@ -1,0 +1,306 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Header styles */
+.header {
+  background-color: #004c75; /* Deep blue for a professional feel */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures header stays on top when scrolling */
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header .logo {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.header nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav ul li {
+  position: relative; /* To allow dropdown menus in future */
+}
+
+.header nav ul li a {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  color: #00cc66; /* Green color on hover */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Subtle background change on hover */
+  border-radius: 6px;
+}
+
+.header nav ul li .btn-signup {
+  background-color: #00cc66;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.header nav ul li .btn-signup:hover {
+  background-color: #00994d; /* Darker green on hover */
+}
+
+/* Header styles ends here    */
+
+/* Hero section styles */
+.hero {
+  position: relative;
+  background-color: rgba(0, 87, 168, 0.8); /* Blue tint */
+  background-image: url("assets/truck_hero_img.webp");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Dark overlay to make text stand out */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensure content stays above the overlay */
+}
+
+.hero-content h1,
+.hero-content p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text-shadow for better contrast */
+}
+
+.cta-btn {
+  background-color: #38a169;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #45b874;
+}
+/* hero styles ends here  */
+/* Main content styles */
+.main-content {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Features Overview section  */
+.features {
+  background-color: #f8f9fa; /* Light background for contrast */
+  padding: 50px 0;
+  text-align: center; /* Center align all text within the section */
+}
+.features h2 {
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 20px; /* Spacing between cards */
+}
+
+.feature-card {
+  background-color: white; /* Card background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding inside the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for transform and shadow */
+  margin: 20px; /* Space between cards */
+}
+.feature-card:hover {
+    transform: translateY(-10px); /* Move the card up on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+.feature-image {
+  width: 250px; /* Set image width */
+  height: 150px; /* Set image height */
+  margin: 0 auto 15px; /* Center the image and add bottom margin */
+}
+
+/* Features Overview Section ends here*/
+
+/* How it works section starts here  */
+
+.how-it-works {
+    background-color: #f8f9fa; /* Light background for contrast */
+  }
+  h2 {
+    text-align: center; /* Center the text */
+    color: #333; /* Optional: Change text color */
+  }
+  
+  .steps-grid {
+    display: flex;
+    justify-content: space-around; /* Evenly distribute cards */
+    flex-wrap: wrap; /* Wrap to next line on smaller screens */
+    margin-top: 20px; /* Space above the steps */
+  }
+  
+  .step-card {
+    background-color: white; /* Card background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 20px; /* Padding inside card */
+    width: 200px; /* Fixed width for cards */
+    margin: 10px; /* Space between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for transform and shadow */
+    text-align: center; /* Center text */
+  }
+  
+  .step-card:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  .step-number {
+    background-color: #4caf50; /* Green background for step number */
+    color: white; /* White text color */
+    border-radius: 50%; /* Circular background */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin: 0 auto 10px; /* Center in the card with margin below */
+    font-size: 1.5rem; /* Larger font size */
+  }
+  
+/* How it works section ends here  */
+
+
+/* Contact us section begins here  */
+.contact-us {
+    background-color: #f8f9fa; /* Light background */
+    padding: 60px 20px; /* Padding for top and bottom */
+    border-radius: 10px; /* Rounded corners for section */
+  }
+  
+  .contact-details {
+    color: #555; /* Text color for contact details */
+  }
+  
+  .contact-link {
+    color: #4caf50; /* Green color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition effect */
+  }
+  
+  .contact-link:hover {
+    color: #388e3c; /* Darker green on hover */
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering the form */
+    max-width: 500px; /* Limit width for larger screens */
+    margin: 0 auto; /* Centering the form */
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%; /* Full width */
+    padding: 15px; /* Inner padding */
+    margin: 10px 0; /* Space between inputs */
+    border: 2px solid #ddd; /* Border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s; /* Transition for border */
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: #4caf50; /* Green border on focus */
+    outline: none; /* Remove outline */
+  }
+  
+  .form-textarea {
+    height: 150px; /* Fixed height for textarea */
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  .submit-button {
+    background-color: #4caf50; /* Green background */
+    color: white; /* Text color */
+    padding: 15px 30px; /* Inner padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 18px; /* Font size */
+    transition: background-color 0.3s; /* Transition effect */
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+    
+/* Contact us section ends here  */
+
+/* for login and signup starts here */
+  
+/* for login and signup ends here  */
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
