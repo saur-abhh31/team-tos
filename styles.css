@@ -81,7 +81,7 @@ body {
 .hero {
   position: relative;
   background-color: rgba(0, 87, 168, 0.8); /* Blue tint */
-  background-image: url("./assets/truck_hero_img.webp");
+  background-image: url("assets/truck_hero_img.jpg");
   background-size: cover;
   background-position: center;
   color: white;
